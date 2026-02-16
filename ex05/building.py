@@ -1,6 +1,7 @@
 from string import punctuation
 import sys
 
+
 def capture_input(args: list[str]) -> str:
     if len(args) == 1:
         print("What is the text to count?")
@@ -10,6 +11,7 @@ def capture_input(args: list[str]) -> str:
         return args[1]
     if len(args) > 2:
         raise AssertionError("this program requires only one argument.")
+
 
 def count_and_display(text: str):
     char_count = len(text)
