@@ -13,28 +13,12 @@ def capture_input(args: list[str]) -> str:
 
 def count_and_display(text: str):
     char_count = len(text)
-    uppercase_count = 0
-    lowercase_count = 0
-    punctuation_count = 0
-    space_count = 0
-    digits_count = 0
 
-    for c in text:
-        if c.isupper():
-            uppercase_count += 1
-            continue
-        if c.islower():
-            lowercase_count += 1
-            continue
-        if c in punctuation:
-            punctuation_count += 1
-            continue
-        if c.isspace():
-            space_count += 1
-            continue
-        if c.isdigit():
-            digits_count += 1
-            continue
+    uppercase_count = sum(c.isupper() for c in text)
+    lowercase_count = sum(c.islower() for c in text)
+    punctuation_count = sum(c in punctuation for c in text)
+    space_count = sum(c.isspace() for c in text)
+    digits_count = sum(c.isdigit() for c in text)
 
     print(f"The text contains {char_count} characters:")
     print(f"{uppercase_count} upper letters")
