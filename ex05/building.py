@@ -3,17 +3,33 @@ import sys
 
 
 def capture_input(args: list[str]) -> str:
+    """
+    Capture text from argument or user input.
+
+    Raises exception if multiple arguments are passed to command line.
+    """
     if len(args) == 1:
         print("What is the text to count?")
         text = sys.stdin.readline()
         return text
-    if len(args) == 2:
+    elif len(args) == 2:
         return args[1]
-    if len(args) > 2:
+    else:
         raise AssertionError("this program requires only one argument.")
 
 
 def count_and_display(text: str):
+    """
+    text (input string): The text to analyze
+
+    Prints the following information:
+    1. The number of characters in the text
+    2. The number of upper case letters
+    3. The number of lower case letters
+    4. The number of punctuation marks
+    5. The number of spaces
+    6. The number of digits
+    """
     char_count = len(text)
 
     uppercase_count = sum(c.isupper() for c in text)
@@ -32,6 +48,10 @@ def count_and_display(text: str):
 
 
 def main():
+    """
+    Captures text, analyze it and display it.
+    Handles exception if multiple clarguments are passed.
+    """
     try:
         text = capture_input(sys.argv)
         count_and_display(text)
