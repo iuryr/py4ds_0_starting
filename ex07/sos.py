@@ -51,13 +51,18 @@ def capture_input(args: list[str]) -> str:
 
     return args[1].upper()
 
+def translate_to_morse(text: str) -> str:
+    """Translate to morse using NESTED_MORSE and remove trailing whitespace"""
+    morse_code = "".join([NESTED_MORSE[c] + " " for c in text])
+
+    return morse_code.rstrip()
+
 
 def main():
     """Program entrypoint"""
     try:
         text = capture_input(sys.argv)
-        trans_table = str.maketrans(NESTED_MORSE)
-        morse_code = text.translate(trans_table)
+        morse_code = translate_to_morse(text)
         print(morse_code)
     except Exception as e:
         print(f"{type(e).__name__}: {e}")
