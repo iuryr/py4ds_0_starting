@@ -45,9 +45,10 @@ def capture_input(args: list[str]) -> str:
     """Capture input if proper. Raise exception otherwise"""
     if len(args) != 2:
         raise AssertionError("the arguments are bad")
-    for c in args[1]:
-        if c.isalnum() is False and c.isspace() is False:
-            raise AssertionError("the arguments are bad")
+
+    if not all(c.isalnum() or c.isspace() for c in args[1]):
+        raise AssertionError("the arguments are bad")
+
     return args[1].upper()
 
 
