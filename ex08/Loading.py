@@ -1,6 +1,10 @@
 from os import get_terminal_size
 
 def ft_tqdm(lst: range) -> None:
+    """
+    Adds side effect of progress bar to stdout each time the range object
+    passed as input has a value requested.
+    """
     COLS = get_terminal_size()[0]
     pct_display_size = 6 # "100%|["
     total_iterations = len(lst)
@@ -18,6 +22,5 @@ def ft_tqdm(lst: range) -> None:
         iter_display = f"]{i:3}/{total_iterations}"
 
         print(pct_display, bar, iter_display,sep="", end="", flush=True)
-
         yield 
 
