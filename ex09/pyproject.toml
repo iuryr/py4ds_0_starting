@@ -3,11 +3,11 @@ name = "ft_package"
 version = "0.0.1"
 description = "A sample test package"
 authors = [
-	{name = "Iury Santos", email="iusantos@student.42sp.org.br"}
+	{name = "Iury Santos"},
+	{email="iusantos@student.42sp.org.br"}
 ]
+license = {text = "MIT"}
 readme = "README.md"
-license = "MIT"
-license-files = ["LICENSE"]
 requires-python = ">=3.10,<3.11"
 dependencies = []
 
