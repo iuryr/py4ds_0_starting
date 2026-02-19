@@ -7,13 +7,13 @@ authors = [
 ]
 readme = "README.md"
 license = "MIT"
-license-files = "LICENSE"
+license-files = ["LICENSE"]
 requires-python = ">=3.10,<3.11"
 dependencies = []
 
 [project.urls]
-Homepage = ""
+Homepage = "https://github.com/iuryr/py4ds_0_starting/tree/main/ex09"
 
 [build-system]
-requires = ["uv_build >= 0.10.0, <0.11.0"]
-build-backend = "uv_build"
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
