@@ -5,11 +5,7 @@ description = "First list of Python for Data Science piscine"
 readme = "README.md"
 requires-python = ">=3.10,<3.11"
 dependencies = [
+    "build>=1.4.0",
     "flake8>=7.3.0",
     "tqdm>=4.67.3",
-]
-
-[tool.uv.workspace]
-members = [
-    "ex09",
 ]
