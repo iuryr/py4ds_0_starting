@@ -1,0 +1,19 @@
+[project]
+name = "ft_package"
+version = "0.0.1"
+description = "A sample test package"
+authors = [
+	{name = "Iury Santos", email="iusantos@student.42sp.org.br"}
+]
+readme = "README.md"
+license = "MIT"
+license-files = "LICENSE"
+requires-python = ">=3.10,<3.11"
+dependencies = []
+
+[project.urls]
+Homepage = ""
+
+[build-system]
+requires = ["uv_build >= 0.10.0, <0.11.0"]
+build-backend = "uv_build"
